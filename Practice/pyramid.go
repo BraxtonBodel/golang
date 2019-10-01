@@ -2,37 +2,11 @@ package main
 
 import "fmt"
 
-func drawPyramid() {
-	var rows, k, temp, temp1 int
-	fmt.Print("Enter number of rows :")
-	fmt.Scan(&rows)
-
-	for i := 1; i <= rows; i++ {
-
-		for j := 1; j <= rows-i; j++ {
-			fmt.Print("  ")
-			temp++
+func drawPyramid(maxRow int) {
+	for i := 1; i <= maxRow; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print("* ")
 		}
-
-		for {
-			if temp <= rows-1 {
-				//fmt.Printf(" %d", i+k)
-				temp++
-			} else {
-				temp1++
-				//fmt.Printf(" %d", (i + k - 2*temp1))
-			}
-			k++
-
-			if k == 2*i-1 {
-				break
-			}
-
-		}
-		fmt.Println(temp)
-		temp = 0
-		temp1 = 0
-		k = 0
 		fmt.Println("")
 	}
 }
